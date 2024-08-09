@@ -37,9 +37,9 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5.5.1
         with:
-          images: enrikem/parcel
+          images: ${{ secrets.DOCKER_USERNAME }}/parcel
 
-      - name: Build and push Docker Inage
+      - name: Build and push Docker Image
         uses: docker/build-push-action@v5
         with:
           context: .
